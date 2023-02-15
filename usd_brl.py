@@ -18,7 +18,7 @@ if __name__ == '__main__':
     try:
         input_val = sys.argv[1]
     except:
-        raise Exception('A value is required to convert the currency')
+        input_val = '1.0'
     
     value_number = float(re.sub("[^0-9.]", "", re.sub( ",", ".", input_val)))
     result = fetch_USD_quote(value_number)
